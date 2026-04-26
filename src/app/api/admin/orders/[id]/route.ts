@@ -3,13 +3,17 @@ import { requireAdmin } from "@/lib/admin";
 
 const allowedStatuses = new Set(["new", "prep", "delivered"]);
 
-export async function PATCH(req: Request, context: { params: Promise<{ id: string }> }) {
+export async function PATCH(
+    req: Request,
+    context: { params: Promise<{ id: string }> }
+) {
     const admin = requireAdmin(req);
     if (!admin.ok) return admin.res;
 
     const { id } = await context.params;
 
     let body: { status?: string };
+
     try {
         body = await req.json();
     } catch {
@@ -17,6 +21,7 @@ export async function PATCH(req: Request, context: { params: Promise<{ id: strin
     }
 
     const status = body.status;
+
     if (!status || !allowedStatuses.has(status)) {
         return Response.json(
             { error: "status must be one of: new, prep, delivered" },
