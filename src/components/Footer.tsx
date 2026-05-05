@@ -33,9 +33,13 @@ export default function Footer() {
           {/* Ontdekken */}
           <div>
             <h4 style={{ color: "white", fontWeight: 600, marginBottom: "1rem", fontSize: "0.9rem" }}>Ontdekken</h4>
-            {["Onze Menu's", "Hoe het werkt", "Halal Certificering"].map(l => (
-                <div key={l} style={{ marginBottom: "0.6rem" }}>
-                  <a href="#" style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none", fontSize: "0.85rem" }}>{l}</a>
+            {[
+              { label: "Onze Menu's", href: "/ontdekken#menus" },
+              { label: "Hoe het werkt", href: "/ontdekken#hoe-het-werkt" },
+              { label: "Halal Certificering", href: "/ontdekken#halal" },
+            ].map(l => (
+                <div key={l.label} style={{ marginBottom: "0.6rem" }}>
+                  <Link href={l.href} style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none", fontSize: "0.85rem" }}>{l.label}</Link>
                 </div>
             ))}
           </div>
@@ -43,9 +47,13 @@ export default function Footer() {
           {/* Service */}
           <div>
             <h4 style={{ color: "white", fontWeight: 600, marginBottom: "1rem", fontSize: "0.9rem" }}>Service</h4>
-            {["Veelgestelde vragen", "Klantenservice", "Bezorging"].map(l => (
-                <div key={l} style={{ marginBottom: "0.6rem" }}>
-                  <a href="#" style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none", fontSize: "0.85rem" }}>{l}</a>
+            {[
+              { label: "Veelgestelde vragen", href: "/service#faq" },
+              { label: "Klantenservice", href: "/service#klantenservice" },
+              { label: "Bezorging", href: "/service#bezorging" },
+            ].map(l => (
+                <div key={l.label} style={{ marginBottom: "0.6rem" }}>
+                  <Link href={l.href} style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none", fontSize: "0.85rem" }}>{l.label}</Link>
                 </div>
             ))}
           </div>
@@ -53,9 +61,13 @@ export default function Footer() {
           {/* Duurzaamheid */}
           <div>
             <h4 style={{ color: "white", fontWeight: 600, marginBottom: "1rem", fontSize: "0.9rem" }}>Duurzaamheid</h4>
-            {["Onze Verpakkingen", "Voedselverspilling", "Digitale Recepten"].map(l => (
-                <div key={l} style={{ marginBottom: "0.6rem" }}>
-                  <a href="#" style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none", fontSize: "0.85rem" }}>{l}</a>
+            {[
+              { label: "Onze Verpakkingen", href: "/duurzaamheid#verpakkingen" },
+              { label: "Voedselverspilling", href: "/duurzaamheid#voedselverspilling" },
+              { label: "Digitale Recepten", href: "/duurzaamheid#digitale-recepten" },
+            ].map(l => (
+                <div key={l.label} style={{ marginBottom: "0.6rem" }}>
+                  <Link href={l.href} style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none", fontSize: "0.85rem" }}>{l.label}</Link>
                 </div>
             ))}
           </div>
