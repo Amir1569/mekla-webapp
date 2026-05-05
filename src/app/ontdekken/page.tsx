@@ -46,7 +46,7 @@ export default function OntdekkenPage() {
                                 borderRadius: 20, padding: "4px 16px",
                                 fontSize: "0.78rem", fontWeight: 600,
                                 color: "#C8782A", marginBottom: "1rem", textTransform: "uppercase", letterSpacing: 1
-                            }}>Onze Menu's</div>
+                            }}>Onze Menu&#39;s</div>
                             <h2 style={{
                                 fontFamily: "'Playfair Display', serif",
                                 fontSize: "2rem", fontWeight: 700,
@@ -63,7 +63,7 @@ export default function OntdekkenPage() {
                                     "🌍 Wekelijks wisselend menu van wereldgerechten",
                                     "🥗 Verse ingrediënten, exact afgemeten per portie",
                                     "⏱️ Klaar in gemiddeld 30 minuten",
-                                    "👨‍👩‍👧 Keuze uit 2- of 4-persoons boxen",
+                                    "👨‍👩‍👧 Keuze uit 1 tot 6 personen",
                                 ].map(item => (
                                     <div key={item} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: "0.9rem", color: "#1A1A1A" }}>
                                         {item}
